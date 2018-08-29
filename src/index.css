@@ -1,0 +1,64 @@
+.msgContainer {
+  width: 280px;
+  min-height: 42px;
+  position: fixed;
+  left: 50%;
+  top: 15px;
+  margin-left: -140px;
+}
+
+.message {
+  width: 280px;
+  height: 42px;
+  line-height: 42px;
+  color: #fff;
+  padding: 0 40px;
+  background: #f23d5f;
+  margin-bottom: 20px;
+  z-index: 99999;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 15px #541212;
+  animation: show .2s;
+  margin-top: 0;
+
+  i {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  span {
+    margin-left: 10px;
+    text-align: center;
+  }
+
+  >* {
+    align-self: center;
+  }
+
+  @keyframes show {
+    from {
+      margin-top: -30px;
+      opacity: 0;
+    } to {
+      margin-top: 0;
+      opacity: 1;      
+    }
+  }
+}
+
+.itemRemove {
+  .message;
+  animation: hide .2s ease-in;
+  
+  @keyframes hide {
+    form {
+      margin-top: 0;
+      opacity: 1;
+    } to {
+      margin-top: -20px;
+      opacity: 0;
+    }
+  }
+}
